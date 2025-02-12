@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter First Name</title>
+    <style>
+        /* Center the heart on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+
+        /* Style the heart */
+        .heart {
+            position: absolute; /* Position the heart absolutely */
+            width: 40vmin; /* Use vmin to scale based on the smaller viewport dimension */
+            height: 36vmin; /* Maintain aspect ratio */
+            background-color: pink;
+            transform: rotate(-45deg);
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            margin-top: -20vmin; /* Adjust for heart height */
+            margin-left: -18vmin; /* Adjust for heart width */
+            z-index: 1; /* Place the heart behind the form */
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 40vmin; /* Match heart size */
+            height: 36vmin; /* Match heart size */
+            background-color: pink;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -20vmin; /* Adjust for heart height */
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 18vmin; /* Adjust for heart width */
+        }
+        #nameForm{
+            z-index: 2;
+        }
+    </style>
+</head>
+<body style="background-color:red;text-align:center">
+    <div class="heart">
+    
+    </div>
+    <form id="nameForm">
+        <label for="name">Enter your first name:</label>
+        <input type="text" id="name" name="namess" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById("nameForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            //fetch(`/namecontroller/acquirename?namess=${encodeURIComponent(name)}`, {method: 'GET'});   <- This is if I just want to send it back
+            window.location.href=`/namecontroller/acquirename?namess=${encodeURIComponent(name)}`; // This is if I want to send it back and send the person to a different HTML
+        });
+    </script>
+</body>
+</html>

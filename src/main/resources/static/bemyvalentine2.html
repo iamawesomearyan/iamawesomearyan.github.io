@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                overflow: hidden;
+            }
+            .image-container {
+                position: relative; /* Establish a stacking context */
+                width: 100vw; /* Adjust as needed */
+                height: 100vh; /* Adjust as needed */
+            }
+            .nochoice{
+                position: absolute;
+                top: 0%;
+                left: 30%;
+                width: 40vw;
+                height: auto;
+                z-index: 1;
+            }
+            .cat{
+                position: absolute;
+                top: 0%;
+                left: 77%;
+                width: 21vw;
+                height: auto;
+                z-index: 2;
+            }
+            .laugh{
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 20vw;
+                height: auto;
+                z-index: 3;
+            }
+            .yes-button{
+                position: relative;
+                display: inline-block;
+                padding: 50px 100px;
+                top: -500px;
+                left: 37%;
+                background-color: #00db00;
+                color: white;
+                text-decoration: none;
+                border-radius: 500px;
+                font-size: 150px;
+            }
+        </style>
+    </head>
+    <body style="background-color:black;">
+        <div class="image-container">
+            <img src="/images/choice.png" alt="Image 1" class="nochoice">
+            <img src="/images/cat.png" alt="Image 2" class="cat">
+            <img src="/images/laugh.gif" alt="Image 3" class="laugh">
+        </div>
+        
+        <a href="/yes.html" class="yes-button">YES!!!!</a>
+    </body>
+</html>

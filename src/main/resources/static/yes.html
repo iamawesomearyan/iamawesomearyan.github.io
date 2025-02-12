@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                overflow: hidden;
+            }
+            .image-container {
+                position: relative; /* Establish a stacking context */
+                width: 100vw; /* Adjust as needed */
+                height: 100vh; /* Adjust as needed */
+            }
+            .yay-exp{
+                position: absolute;
+                top: 20%;
+                left: 28%;
+                width: 50vw;
+                height: auto;
+                z-index: 1;
+            }
+            .spy{
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 25vw;
+                height: auto;
+                z-index: 2;
+            }
+            .yay-cat{
+                position: absolute;
+                top: 0%;
+                left: 74%;
+                width: 25vw;
+                height: auto;
+                z-index: 2;
+            }
+            .us{
+                position: absolute;
+                top: 30%;
+                left: -7%;
+                width: 40vw;
+                height: auto;
+                z-index: 2;
+            }
+
+        </style>
+    </head>
+    <body style="background-color:rgb(153, 69, 201);">
+        <div class="image-container">
+            <img src="/images/yayexp.png" alt="Image 1" class="yay-exp">
+            <img src="/images/spy.jpg" alt="Image 2" class="spy">
+            <img src="/images/yaycat.png" alt="Image 3" class="yay-cat">
+            <img src="/images/soon.png" alt="Image 4" class="us">
+        </div>
+    </body>
+</html>

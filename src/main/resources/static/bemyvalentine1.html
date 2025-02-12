@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                overflow: hidden;
+            }
+            .image-container {
+                position: relative; /* Establish a stacking context */
+                width: 100vw; /* Adjust as needed */
+                height: 100vh; /* Adjust as needed */
+            }
+            .the-ask{
+                position: absolute;
+                top: 0%;
+                left: 30%;
+                width: 40vw;
+                height: auto;
+                z-index: 1;
+            }
+            .heart1{
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 25vw;
+                height: auto;
+                z-index: 2;
+            }
+            .heart2{
+                position: absolute;
+                top: 0%;
+                left: 74%;
+                width: 25vw;
+                height: auto;
+                z-index: 2;
+            }
+            .yes-button{
+                position: relative;
+                display: inline-block;
+                padding: 50px 100px;
+                top: -500px;
+                left: 25%;
+                background-color: #00db00;
+                color: white;
+                text-decoration: none;
+                border-radius: 500px;
+                font-size: 150px;
+            }
+            .no-button{
+                position: relative;
+                display: inline-block;
+                padding: 50px 100px;
+                top: -500px;
+                left: 30%;
+                background-color: #db0000;
+                color: white;
+                text-decoration: none;
+                border-radius: 500px;
+                font-size: 150px;
+            }
+
+        </style>
+    </head>
+    <body style="background-color:lightpink;">
+        <div class="image-container">
+            <img src="/images/theask.png" alt="Image 1" class="the-ask">
+            <img src="/images/heart.png" alt="Image 2" class="heart1">
+            <img src="/images/heart.png" alt="Image 3" class="heart2">
+        </div>
+        
+        <a href="/yes.html" class="yes-button">YES!!!!</a>
+        <a href="/bemyvalentine2.html" class="no-button">No.</a>
+    </body>
+</html>

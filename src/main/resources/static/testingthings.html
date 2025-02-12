@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Heart with Text</title>
+    <style>
+        /* Center the heart on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Style the heart */
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            background-color: pink;
+            transform: rotate(-45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -45px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 45px;
+        }
+
+        /* Style the text inside the heart */
+        .heart-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            color: white;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <div class="heart-text">I ❤️ You</div>
+    </div>
+</body>
+</html>

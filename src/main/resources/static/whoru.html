@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                overflow: hidden;
+            }
+            .image-container {
+                position: relative; /* Establish a stacking context */
+                width: 100vw; /* Adjust as needed */
+                height: 100vh; /* Adjust as needed */
+            }
+            .image-back {
+                position: absolute;
+                top: 40%;
+                left: 30%;
+                width: 25vw;
+                height: auto;
+                z-index: 1;
+            }
+            .image-front {
+                position: absolute; /* Position the images absolutely within the container */
+                top: 10%;
+                left: 50%;
+                width: 25vw; /* Make images fill the container */
+                height: auto; /* Make images fill the container */
+                z-index: 2;
+            }
+            .back-button{
+                position: relative;
+                display: inline-block;
+                padding: 10px 20px;
+                top: -200px;
+                left: 35%;
+                background-color: #007bff;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+        </style>
+    </head>
+    <body style="background-color:rgb(146, 230, 255);text-align:center">
+        <div class="image-container">
+            <img src="/images/whou.png" alt="Image 1" class="image-front">
+            <img src="/images/confemo.png" alt="Image 2" class="image-back">
+        </div>
+        <a href="/index.html" class="back-button">Go Back</a>
+    </body>
+</html>
