@@ -22,10 +22,10 @@ public class Controller {
         this.inputName = namess;
         //dbService.addData(namess);
         if(namess.toLowerCase().equals("fahima") || namess.toLowerCase().equals("fahima noufal")){
-            return new RedirectView("/bemyvalentine1.html");
+            return new RedirectView("bemyvalentine1.html");
         }
         else{
-            return new RedirectView("/whoru.html");
+            return new RedirectView("whoru.html");
         }
         
         
