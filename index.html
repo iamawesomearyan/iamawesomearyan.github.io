@@ -66,9 +66,15 @@
     <script>
         document.getElementById("nameForm").addEventListener("submit", function(event){
             event.preventDefault();
-            const name = document.getElementById("name").value;
+            const name = document.getElementById("name").value.toLowerCase();
+            if(name==="fahima" || name==="fahima noufal"){
+                window.location.href="/bemyvalentine1.html"
+            }
+            else{
+                window.location.href="/whoru.html"
+            }
             //fetch(`/namecontroller/acquirename?namess=${encodeURIComponent(name)}`, {method: 'GET'});   <- This is if I just want to send it back
-            window.location.href=`/namecontroller/acquirename?namess=${encodeURIComponent(name)}`; // This is if I want to send it back and send the person to a different HTML
+           // window.location.href=`/namecontroller/acquirename?namess=${encodeURIComponent(name)}`; // This is if I want to send it back and send the person to a different HTML
         });
     </script>
 </body>
